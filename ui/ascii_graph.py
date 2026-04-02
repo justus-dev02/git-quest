@@ -252,21 +252,21 @@ class ASCIIGraphDisplay:
             result = subprocess.run(
                 ["git", "branch", "--list"], cwd=repo_path, capture_output=True, text=True
             )
-            branch_count = len([l for l in result.stdout.split("\n") if l.strip()])
+            branch_count = len([line for line in result.stdout.split("\n") if line.strip()])
             lines.append(f"│   🌿 Branches: {branch_count}")
 
             # Tag count
             result = subprocess.run(
                 ["git", "tag", "--list"], cwd=repo_path, capture_output=True, text=True
             )
-            tag_count = len([l for l in result.stdout.split("\n") if l.strip()])
+            tag_count = len([line for line in result.stdout.split("\n") if line.strip()])
             lines.append(f"│   🏷️  Tags: {tag_count}")
 
             # Stash count
             result = subprocess.run(
                 ["git", "stash", "list"], cwd=repo_path, capture_output=True, text=True
             )
-            stash_count = len([l for l in result.stdout.split("\n") if l.strip()])
+            stash_count = len([line for line in result.stdout.split("\n") if line.strip()])
             lines.append(f"│   📦 Stashes: {stash_count}")
 
         except Exception as e:
@@ -367,14 +367,14 @@ class ASCIIGraphDisplay:
             )
             only_in_2 = [c for c in result2.stdout.split("\n") if c.strip()]
 
-            lines.append(f"│")
+            lines.append("│")
             lines.append(f"│  Only in {ref1} ({len(only_in_1)} commits):")
             for commit in only_in_1[:10]:
                 lines.append(f"│    + {commit}")
             if len(only_in_1) > 10:
                 lines.append(f"│    ... and {len(only_in_1) - 10} more")
 
-            lines.append(f"│")
+            lines.append("│")
             lines.append(f"│  Only in {ref2} ({len(only_in_2)} commits):")
             for commit in only_in_2[:10]:
                 lines.append(f"│    - {commit}")
@@ -387,7 +387,7 @@ class ASCIIGraphDisplay:
             )
             if result3.returncode == 0:
                 ancestor = result3.stdout.strip()[:8]
-                lines.append(f"│")
+                lines.append("│")
                 lines.append(f"│  Common ancestor: {ancestor}")
 
         except Exception as e:

@@ -164,7 +164,7 @@ class GitGraphGenerator:
                     commits.append(commit)
 
             # Get branch information
-            branch_result = subprocess.run(
+            subprocess.run(
                 ["git", "branch", "-a", "--contains", "--format=%(refname:short)"],
                 cwd=self.repo_path,
                 capture_output=True,
@@ -172,7 +172,7 @@ class GitGraphGenerator:
             )
 
             # Get tag information
-            tag_result = subprocess.run(
+            subprocess.run(
                 ["git", "tag", "--list", "--contains"],
                 cwd=self.repo_path,
                 capture_output=True,
@@ -403,13 +403,15 @@ class GitGraphGenerator:
             result = subprocess.run(
                 ["git", "branch", "--list"], cwd=self.repo_path, capture_output=True, text=True
             )
-            stats["total_branches"] = len([l for l in result.stdout.split("\n") if l.strip()])
+            stats["total_branches"] = len(
+                [line for line in result.stdout.split("\n") if line.strip()]
+            )
 
             # Total tags
             result = subprocess.run(
                 ["git", "tag", "--list"], cwd=self.repo_path, capture_output=True, text=True
             )
-            stats["total_tags"] = len([l for l in result.stdout.split("\n") if l.strip()])
+            stats["total_tags"] = len([line for line in result.stdout.split("\n") if line.strip()])
 
             # Contributors
             result = subprocess.run(
@@ -418,7 +420,9 @@ class GitGraphGenerator:
                 capture_output=True,
                 text=True,
             )
-            stats["contributors"] = len([l for l in result.stdout.split("\n") if l.strip()])
+            stats["contributors"] = len(
+                [line for line in result.stdout.split("\n") if line.strip()]
+            )
 
             # First and last commit dates
             result = subprocess.run(

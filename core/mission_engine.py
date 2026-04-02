@@ -54,5 +54,5 @@ class MissionEngine:
             logger.error(f"Unsupported objective type: {objective_type}")
             return {
                 "success": False,
-                "message": f"Verification for objective type '{objective_type}' is not yet implemented.",
+                "message": f"Objective type '{objective_type}' not yet implemented.",
             }

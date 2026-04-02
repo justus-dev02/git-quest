@@ -2,15 +2,12 @@ class GitQuestError(Exception):
     """Base class for all Git Quest exceptions."""
 
 
-
 class RepoNotFoundError(GitQuestError):
     """Raised when a repository is not found."""
 
 
-
 class ObjectiveNotMetError(GitQuestError):
     """Raised when a level objective is not completed."""
-
 
 
 class GitCommandError(GitQuestError):
@@ -31,4 +28,3 @@ class GitCommandError(GitQuestError):
 
 class ConfigurationError(GitQuestError):
     """Raised when there is a configuration issue."""
-

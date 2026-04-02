@@ -85,7 +85,7 @@ class MenuSystem:
         difficulties = ["beginner", "intermediate", "advanced", "expert"]
 
         for diff in difficulties:
-            diff_levels = [l for l in levels if l.get("difficulty") == diff]
+            diff_levels = [level for level in levels if level.get("difficulty") == diff]
             if diff_levels:
                 print(f"\n{diff.upper()}:")
                 for level in diff_levels:

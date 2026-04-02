@@ -67,13 +67,15 @@ class LevelManager:
 
         console.print(stats_table)
         console.print(
-            f"\n[bold green]📂 Path:[/bold green] {self.workspace_path}/level{level_data['id']:02d}\n"
+            f"\n[bold green]📂 Path:[/bold green] "
+            f"{self.workspace_path}/level{level_data['id']:02d}\n"
         )
 
     def _run_level(self, level_data: Dict[str, Any]) -> None:
         """Run the main level interaction loop."""
         console.print(
-            "[dim]Type your git commands directly. Special commands: status, log, graph, hint, check, quit.[/dim]"
+            "[dim]Type your git commands directly. Special commands: "
+            "status, log, graph, hint, check, quit.[/dim]"
         )
 
         while True:
@@ -131,7 +133,8 @@ class LevelManager:
             Panel(
                 f"[bold green]Level '{result['level_name']}' Completed![/bold green]\n\n"
                 f"[bold white]Total Score:[/bold white] {result['score']['total']}\n"
-                f"[bold white]Rating:[/bold white] [bold gold1]{result['score']['rating']}[/bold gold1]",
+                f"[bold white]Rating:[/bold white] "
+                f"[bold gold1]{result['score']['rating']}[/bold gold1]",
                 border_style="green",
             )
         )
@@ -190,7 +193,8 @@ class MenuController:
                 self.app.level_manager.load_level(next_lvl["id"])
             else:
                 console.print(
-                    "[bold yellow]🎉 All levels completed! Try selecting a level to replay.[/bold yellow]"
+                    "[bold yellow]🎉 All levels completed! "
+                    "Try selecting a level to replay.[/bold yellow]"
                 )
         elif choice == "3":
             self.level_select_menu()
@@ -217,7 +221,7 @@ class MenuController:
 
         console.print(table)
 
-        level_ids = [str(l["id"]) for l in all_levels] + ["0"]
+        level_ids = [str(level["id"]) for level in all_levels] + ["0"]
         choice = Prompt.ask("Enter level ID to start (0 to go back)", choices=level_ids)
 
         if choice != "0":

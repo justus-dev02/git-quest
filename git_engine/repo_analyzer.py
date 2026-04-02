@@ -264,7 +264,7 @@ class RepoAnalyzer:
             result = subprocess.run(
                 ["git", "stash", "list"], cwd=repo_path, capture_output=True, text=True
             )
-            return len([l for l in result.stdout.split("\n") if l.strip()])
+            return len([line for line in result.stdout.split("\n") if line.strip()])
         except Exception as e:
             logger.error(f"Error getting stash count: {e}", exc_info=True)
             return 0
