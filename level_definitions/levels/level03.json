@@ -1,0 +1,22 @@
+{
+  "id": 3,
+  "name": "Git Status Master",
+  "description": "Understand the staging area by checking git status.",
+  "story": "Files can be tracked, staged, or untracked. Learn to read git status.",
+  "difficulty": "beginner",
+  "initial_state": "empty_repo",
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "Create a file and check 'git status'",
+    "Stage it with 'git add' and check status again",
+    "Commit and verify clean state"
+  ],
+  "base_score": 1000,
+  "par_time": 60,
+  "par_commands": 4,
+  "files": {
+    "test.txt": "test content"
+  }
+}

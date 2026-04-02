@@ -1,0 +1,28 @@
+{
+  "id": 22,
+  "name": "Create Annotated Tag",
+  "description": "Create an annotated tag with a message.",
+  "story": "Release v2.0 needs a proper annotated tag.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project v2.0"
+      }
+    }
+  ],
+  "objective": {
+    "type": "tag_exists",
+    "name": "v2.0"
+  },
+  "hints": [
+    "Use 'git tag -a v2.0 -m \"Release version 2.0\"'",
+    "Annotated tags store tagger info and message",
+    "View with 'git show v2.0'"
+  ],
+  "base_score": 1000,
+  "par_time": 45,
+  "par_commands": 2
+}

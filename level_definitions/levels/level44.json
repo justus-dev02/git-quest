@@ -1,0 +1,58 @@
+{
+  "id": 44,
+  "name": "Complex Rebase",
+  "description": "Perform a complex multi-step rebase.",
+  "story": "Reorganize an entire feature branch history.",
+  "difficulty": "expert",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Base",
+      "files": {
+        "base.txt": "base"
+      }
+    },
+    {
+      "message": "A",
+      "files": {
+        "a.txt": "a"
+      },
+      "branch": "feature"
+    },
+    {
+      "message": "B",
+      "files": {
+        "b.txt": "b"
+      },
+      "branch": "feature"
+    },
+    {
+      "message": "C",
+      "files": {
+        "c.txt": "c"
+      },
+      "branch": "feature"
+    },
+    {
+      "message": "D",
+      "files": {
+        "d.txt": "d"
+      },
+      "branch": "feature"
+    }
+  ],
+  "initial_branches": [
+    "feature"
+  ],
+  "objective": {
+    "type": "rebase_completed"
+  },
+  "hints": [
+    "Plan your rebase order first",
+    "Use interactive rebase",
+    "Be prepared to resolve conflicts"
+  ],
+  "base_score": 2000,
+  "par_time": 420,
+  "par_commands": 10
+}

@@ -1,0 +1,38 @@
+{
+  "id": 7,
+  "name": "Fast Forward Merge",
+  "description": "Merge a feature branch using fast-forward.",
+  "story": "Your feature is complete. Merge it back into main.",
+  "difficulty": "beginner",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Add feature",
+      "files": {
+        "feature.txt": "feature"
+      },
+      "branch": "feature"
+    }
+  ],
+  "initial_branches": [
+    "feature"
+  ],
+  "objective": {
+    "type": "merge_completed",
+    "branch": "feature"
+  },
+  "hints": [
+    "Switch to main first",
+    "Use 'git merge feature'",
+    "Since main hasn't changed, it will be a fast-forward merge"
+  ],
+  "base_score": 1000,
+  "par_time": 60,
+  "par_commands": 3
+}

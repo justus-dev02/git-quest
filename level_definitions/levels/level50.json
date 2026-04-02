@@ -1,0 +1,47 @@
+{
+  "id": 50,
+  "name": "Full Repository Recovery",
+  "description": "The ultimate Git challenge - complete repository recovery.",
+  "story": "Everything is broken. Use all your Git knowledge to restore this repository.",
+  "difficulty": "expert",
+  "initial_state": "detached_head",
+  "initial_commits": [
+    {
+      "message": "Original",
+      "files": {
+        "original.txt": "precious"
+      }
+    },
+    {
+      "message": "Work 1",
+      "files": {
+        "work1.txt": "data1"
+      }
+    },
+    {
+      "message": "Work 2",
+      "files": {
+        "work2.txt": "data2"
+      }
+    },
+    {
+      "message": "Final",
+      "files": {
+        "final.txt": "final"
+      }
+    }
+  ],
+  "objective": {
+    "type": "commit_count",
+    "count": 4
+  },
+  "hints": [
+    "Assess the damage first",
+    "Use reflog to find all commits",
+    "Reconstruct the branch structure",
+    "This combines everything you've learned!"
+  ],
+  "base_score": 2500,
+  "par_time": 600,
+  "par_commands": 15
+}

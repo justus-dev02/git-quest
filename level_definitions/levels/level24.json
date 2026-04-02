@@ -1,0 +1,45 @@
+{
+  "id": 24,
+  "name": "Bisect Basic",
+  "description": "Use git bisect to find a buggy commit.",
+  "story": "A bug was introduced somewhere in the history. Find it with bisect.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Good start",
+      "files": {
+        "app.py": "good"
+      }
+    },
+    {
+      "message": "Still good",
+      "files": {
+        "app.py": "good"
+      }
+    },
+    {
+      "message": "Bug introduced",
+      "files": {
+        "app.py": "bad"
+      }
+    },
+    {
+      "message": "More work",
+      "files": {
+        "app.py": "bad"
+      }
+    }
+  ],
+  "objective": {
+    "type": "bisect_completed"
+  },
+  "hints": [
+    "Start with 'git bisect start'",
+    "Mark current as bad: 'git bisect bad'",
+    "Mark first commit as good: 'git bisect good <commit>'"
+  ],
+  "base_score": 1400,
+  "par_time": 180,
+  "par_commands": 6
+}

@@ -1,0 +1,44 @@
+{
+  "id": 34,
+  "name": "Rebase Onto",
+  "description": "Use git rebase --onto for complex history rewriting.",
+  "story": "Move your feature branch to a different base commit.",
+  "difficulty": "advanced",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Base",
+      "files": {
+        "base.txt": "base"
+      }
+    },
+    {
+      "message": "Old base",
+      "files": {
+        "old.txt": "old"
+      },
+      "branch": "old-feature"
+    },
+    {
+      "message": "Feature",
+      "files": {
+        "feature.txt": "feature"
+      },
+      "branch": "old-feature"
+    }
+  ],
+  "initial_branches": [
+    "old-feature"
+  ],
+  "objective": {
+    "type": "rebase_completed"
+  },
+  "hints": [
+    "Use 'git rebase --onto <new-base> <old-base> <branch>'",
+    "This replays commits from old-base onto new-base",
+    "Powerful for restructuring history"
+  ],
+  "base_score": 1700,
+  "par_time": 180,
+  "par_commands": 4
+}

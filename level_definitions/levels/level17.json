@@ -1,0 +1,34 @@
+{
+  "id": 17,
+  "name": "Reset Hard",
+  "description": "Use git reset --hard to discard all changes.",
+  "story": "Everything is messed up. Start fresh from the last good commit.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Good commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Work in progress",
+      "files": {
+        "wip.txt": "mess"
+      }
+    }
+  ],
+  "objective": {
+    "type": "reset_completed",
+    "clean": true
+  },
+  "hints": [
+    "Use 'git reset --hard HEAD~1'",
+    "This will discard all uncommitted changes",
+    "Be careful - this is destructive!"
+  ],
+  "base_score": 1100,
+  "par_time": 45,
+  "par_commands": 2
+}

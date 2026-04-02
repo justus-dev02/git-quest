@@ -1,0 +1,33 @@
+{
+  "id": 23,
+  "name": "Checkout a Tag",
+  "description": "Checkout a specific tag to view that version.",
+  "story": "You need to examine the code at v1.0. Checkout the tag.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Version 1",
+      "files": {
+        "README.md": "# v1"
+      }
+    },
+    {
+      "message": "Version 2",
+      "files": {
+        "README.md": "# v2"
+      }
+    }
+  ],
+  "objective": {
+    "type": "detached_head"
+  },
+  "hints": [
+    "First create tag v1.0 on the first commit",
+    "Use 'git checkout v1.0'",
+    "This puts you in detached HEAD state"
+  ],
+  "base_score": 1100,
+  "par_time": 60,
+  "par_commands": 3
+}

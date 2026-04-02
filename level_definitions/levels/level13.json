@@ -1,0 +1,27 @@
+{
+  "id": 13,
+  "name": "Stash Your Changes",
+  "description": "Temporarily save uncommitted changes with git stash.",
+  "story": "You need to switch branches but have uncommitted work. Stash it!",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "stash_exists"
+  },
+  "hints": [
+    "Modify a tracked file",
+    "Use 'git stash' or 'git stash push -m \"message\"'",
+    "Verify with 'git stash list'"
+  ],
+  "base_score": 1100,
+  "par_time": 60,
+  "par_commands": 3
+}

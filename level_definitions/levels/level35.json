@@ -1,0 +1,44 @@
+{
+  "id": 35,
+  "name": "Rebase vs Merge",
+  "description": "Understand when to rebase vs when to merge.",
+  "story": "Choose the right strategy to integrate changes.",
+  "difficulty": "advanced",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Main update",
+      "files": {
+        "main.txt": "main"
+      }
+    },
+    {
+      "message": "Feature",
+      "files": {
+        "feature.txt": "feature"
+      },
+      "branch": "feature"
+    }
+  ],
+  "initial_branches": [
+    "feature"
+  ],
+  "objective": {
+    "type": "merge_completed",
+    "branch": "feature"
+  },
+  "hints": [
+    "Consider if you want linear history (rebase) or to preserve context (merge)",
+    "For this level, use merge with --no-ff",
+    "This preserves the feature branch in history"
+  ],
+  "base_score": 1400,
+  "par_time": 90,
+  "par_commands": 3
+}

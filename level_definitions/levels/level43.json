@@ -1,0 +1,20 @@
+{
+  "id": 43,
+  "name": "Nested Merge Conflicts",
+  "description": "Resolve complex nested merge conflicts.",
+  "story": "Multiple files have conflicts. Resolve them all correctly.",
+  "difficulty": "expert",
+  "initial_state": "merge_conflict",
+  "objective": {
+    "type": "merge_completed",
+    "branch": "feature"
+  },
+  "hints": [
+    "Check all conflicted files",
+    "Resolve each conflict carefully",
+    "Test your changes before committing"
+  ],
+  "base_score": 1900,
+  "par_time": 360,
+  "par_commands": 8
+}

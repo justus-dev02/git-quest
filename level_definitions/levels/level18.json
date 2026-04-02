@@ -1,0 +1,28 @@
+{
+  "id": 18,
+  "name": "Amend Commit",
+  "description": "Fix the last commit using git commit --amend.",
+  "story": "You forgot to add a file to your commit. Amend it!",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "amend_commit",
+    "message": "Add main feature"
+  },
+  "hints": [
+    "Add the forgotten file",
+    "Use 'git commit --amend'",
+    "Edit the message if needed"
+  ],
+  "base_score": 1100,
+  "par_time": 60,
+  "par_commands": 3
+}

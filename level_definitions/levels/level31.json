@@ -1,0 +1,19 @@
+{
+  "id": 31,
+  "name": "Detached HEAD",
+  "description": "Understand and work with detached HEAD state.",
+  "story": "You're in detached HEAD state. Understand what this means.",
+  "difficulty": "advanced",
+  "initial_state": "detached_head",
+  "objective": {
+    "type": "detached_head"
+  },
+  "hints": [
+    "HEAD points directly to a commit, not a branch",
+    "Any commits here will be lost if you checkout a branch",
+    "Create a branch to save your work"
+  ],
+  "base_score": 1200,
+  "par_time": 60,
+  "par_commands": 2
+}

@@ -1,0 +1,46 @@
+{
+  "id": 49,
+  "name": "Repository Cleanup",
+  "description": "Clean up a messy repository.",
+  "story": "This repo is a mess. Clean up branches, tags, and history.",
+  "difficulty": "expert",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Main",
+      "files": {
+        "main.txt": "main"
+      }
+    },
+    {
+      "message": "Old feature",
+      "files": {
+        "old.txt": "old"
+      },
+      "branch": "old-1"
+    },
+    {
+      "message": "Older",
+      "files": {
+        "older.txt": "older"
+      },
+      "branch": "old-2"
+    }
+  ],
+  "initial_branches": [
+    "old-1",
+    "old-2",
+    "deprecated"
+  ],
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "Delete unnecessary branches",
+    "Remove old tags",
+    "Run git gc"
+  ],
+  "base_score": 1700,
+  "par_time": 240,
+  "par_commands": 8
+}

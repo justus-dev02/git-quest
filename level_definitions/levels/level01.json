@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "name": "First Commit",
+  "description": "Create your first commit in the repository. This is the beginning of your Git journey!",
+  "story": "You've just initialized a new Git repository. Every great project starts with a single commit. Make yours!",
+  "difficulty": "beginner",
+  "initial_state": "empty_repo",
+  "objective": {
+    "type": "commit_exists",
+    "message": "initial commit"
+  },
+  "hints": [
+    "Use 'git add .' to stage all files",
+    "Use 'git commit -m \"initial commit\"' to create your commit",
+    "Check your progress with 'git log'"
+  ],
+  "base_score": 1000,
+  "par_time": 60,
+  "par_commands": 3,
+  "files": {
+    "README.md": "# My Project\n\nWelcome to my project!"
+  }
+}

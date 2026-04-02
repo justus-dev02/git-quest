@@ -1,0 +1,31 @@
+{
+  "id": 6,
+  "name": "Commit on Branch",
+  "description": "Make a commit on a feature branch.",
+  "story": "Now that you're on the feature branch, add your feature code.",
+  "difficulty": "beginner",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "initial_branches": [
+    "feature-login"
+  ],
+  "objective": {
+    "type": "commit_message",
+    "contains": "login"
+  },
+  "hints": [
+    "First switch to feature-login",
+    "Create a login-related file",
+    "Commit with a message about login"
+  ],
+  "base_score": 1000,
+  "par_time": 90,
+  "par_commands": 4
+}

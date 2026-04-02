@@ -1,0 +1,46 @@
+{
+  "id": 46,
+  "name": "Lost Commits Recovery",
+  "description": "Recover multiple lost commits.",
+  "story": "Multiple commits were lost in a hard reset. Recover them all.",
+  "difficulty": "expert",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Base",
+      "files": {
+        "base.txt": "base"
+      }
+    },
+    {
+      "message": "Lost 1",
+      "files": {
+        "lost1.txt": "data1"
+      }
+    },
+    {
+      "message": "Lost 2",
+      "files": {
+        "lost2.txt": "data2"
+      }
+    },
+    {
+      "message": "Lost 3",
+      "files": {
+        "lost3.txt": "data3"
+      }
+    }
+  ],
+  "objective": {
+    "type": "commit_count",
+    "count": 4
+  },
+  "hints": [
+    "Use reflog to find all lost commits",
+    "Cherry-pick them back or reset",
+    "Verify all files are recovered"
+  ],
+  "base_score": 1900,
+  "par_time": 240,
+  "par_commands": 6
+}

@@ -1,0 +1,28 @@
+{
+  "id": 2,
+  "name": "Multiple Commits",
+  "description": "Create multiple commits to build a history.",
+  "story": "A single commit is good, but a project needs history. Create three commits.",
+  "difficulty": "beginner",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "First commit",
+      "files": {
+        "file1.txt": "content1"
+      }
+    }
+  ],
+  "objective": {
+    "type": "commit_count",
+    "count": 3
+  },
+  "hints": [
+    "Create a new file for each commit",
+    "Stage and commit each file",
+    "Use 'git log' to see your history"
+  ],
+  "base_score": 1000,
+  "par_time": 90,
+  "par_commands": 6
+}

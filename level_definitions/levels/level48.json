@@ -1,0 +1,33 @@
+{
+  "id": 48,
+  "name": "Reflog Rescue Mission",
+  "description": "Complete rescue mission using only reflog.",
+  "story": "The .git directory is in chaos. Use reflog to reconstruct.",
+  "difficulty": "expert",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Start",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Important",
+      "files": {
+        "important.txt": "critical"
+      }
+    }
+  ],
+  "objective": {
+    "type": "reflog_recovery"
+  },
+  "hints": [
+    "Study the reflog carefully",
+    "Understand each HEAD movement",
+    "Reconstruct the intended state"
+  ],
+  "base_score": 2000,
+  "par_time": 360,
+  "par_commands": 8
+}

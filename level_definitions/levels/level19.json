@@ -1,0 +1,44 @@
+{
+  "id": 19,
+  "name": "Cherry Pick",
+  "description": "Apply a specific commit from another branch.",
+  "story": "You need just one commit from the feature branch. Cherry-pick it!",
+  "difficulty": "intermediate",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Useful feature",
+      "files": {
+        "useful.txt": "useful"
+      },
+      "branch": "feature"
+    },
+    {
+      "message": "Not needed",
+      "files": {
+        "notneeded.txt": "skip"
+      },
+      "branch": "feature"
+    }
+  ],
+  "initial_branches": [
+    "feature"
+  ],
+  "objective": {
+    "type": "cherry_pick_completed"
+  },
+  "hints": [
+    "Find the commit hash you want",
+    "Use 'git cherry-pick <commit-hash>'",
+    "Only that specific commit will be applied"
+  ],
+  "base_score": 1300,
+  "par_time": 90,
+  "par_commands": 3
+}

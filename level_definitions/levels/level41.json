@@ -1,0 +1,35 @@
+{
+  "id": 41,
+  "name": "Recover Deleted Branch",
+  "description": "Recover a branch that was accidentally deleted.",
+  "story": "You deleted a branch before merging! Recover it from reflog.",
+  "difficulty": "expert",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Feature work",
+      "files": {
+        "feature.txt": "code"
+      },
+      "branch": "important-feature"
+    }
+  ],
+  "objective": {
+    "type": "branch_exists",
+    "name": "important-feature"
+  },
+  "hints": [
+    "Use 'git reflog' to find the branch tip",
+    "Find the commit where the branch was",
+    "Recreate with 'git branch important-feature <commit>'"
+  ],
+  "base_score": 1700,
+  "par_time": 120,
+  "par_commands": 4
+}

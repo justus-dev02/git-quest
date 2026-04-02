@@ -1,0 +1,40 @@
+{
+  "id": 9,
+  "name": "View Log History",
+  "description": "Navigate and understand git log options.",
+  "story": "Learn to read your project history effectively.",
+  "difficulty": "beginner",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "First commit",
+      "files": {
+        "file1.txt": "1"
+      }
+    },
+    {
+      "message": "Second commit",
+      "files": {
+        "file2.txt": "2"
+      }
+    },
+    {
+      "message": "Third commit",
+      "files": {
+        "file3.txt": "3"
+      }
+    }
+  ],
+  "objective": {
+    "type": "commit_count",
+    "count": 3
+  },
+  "hints": [
+    "Use 'git log --oneline' for compact view",
+    "Use 'git log --graph' to see branch structure",
+    "Use 'git log -n 3' to limit results"
+  ],
+  "base_score": 1000,
+  "par_time": 60,
+  "par_commands": 2
+}

@@ -1,0 +1,20 @@
+{
+  "id": 12,
+  "name": "Resolve Merge Conflict",
+  "description": "Properly resolve a merge conflict.",
+  "story": "Keep both changes and resolve the conflict properly.",
+  "difficulty": "intermediate",
+  "initial_state": "merge_conflict",
+  "objective": {
+    "type": "merge_completed",
+    "branch": "feature"
+  },
+  "hints": [
+    "Look for <<<<<<<, =======, and >>>>>>> markers",
+    "Combine both changes meaningfully",
+    "Remove all conflict markers before committing"
+  ],
+  "base_score": 1200,
+  "par_time": 180,
+  "par_commands": 5
+}

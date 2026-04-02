@@ -1,0 +1,27 @@
+{
+  "id": 37,
+  "name": "Push Rejection",
+  "description": "Handle a rejected push and resolve it.",
+  "story": "Your push was rejected because remote has new commits. Fix it!",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "First add a remote",
+    "Try to push and see the rejection",
+    "Pull first, then push"
+  ],
+  "base_score": 1400,
+  "par_time": 120,
+  "par_commands": 5
+}

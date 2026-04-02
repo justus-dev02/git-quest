@@ -1,0 +1,38 @@
+{
+  "id": 8,
+  "name": "Delete Branch",
+  "description": "Clean up by deleting a merged branch.",
+  "story": "The feature branch has been merged. Clean up your workspace.",
+  "difficulty": "beginner",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Add feature",
+      "files": {
+        "feature.txt": "feature"
+      },
+      "branch": "feature"
+    }
+  ],
+  "initial_branches": [
+    "feature"
+  ],
+  "objective": {
+    "type": "branch_exists",
+    "name": "feature"
+  },
+  "hints": [
+    "First merge the feature branch",
+    "Then delete with 'git branch -d feature'",
+    "List branches to verify"
+  ],
+  "base_score": 1000,
+  "par_time": 60,
+  "par_commands": 4
+}

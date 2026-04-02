@@ -1,0 +1,27 @@
+{
+  "id": 47,
+  "name": "Packfile Operations",
+  "description": "Understand and work with Git packfiles.",
+  "story": "Optimize the repository by managing packfiles.",
+  "difficulty": "expert",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Commit",
+      "files": {
+        "file.txt": "content"
+      }
+    }
+  ],
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "Run 'git gc' to optimize",
+    "Use 'git count-objects -v' to see stats",
+    "Understand loose vs packed objects"
+  ],
+  "base_score": 1600,
+  "par_time": 120,
+  "par_commands": 4
+}

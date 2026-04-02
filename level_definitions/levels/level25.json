@@ -1,0 +1,39 @@
+{
+  "id": 25,
+  "name": "Bisect and Fix",
+  "description": "Find and fix a bug using bisect.",
+  "story": "Complete the bisect process and fix the bug.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Good start",
+      "files": {
+        "app.py": "good"
+      }
+    },
+    {
+      "message": "Bug here",
+      "files": {
+        "app.py": "bad"
+      }
+    },
+    {
+      "message": "More work",
+      "files": {
+        "app.py": "bad"
+      }
+    }
+  ],
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "Complete the bisect to find the bad commit",
+    "Fix the code in that commit",
+    "End bisect with 'git bisect reset'"
+  ],
+  "base_score": 1500,
+  "par_time": 240,
+  "par_commands": 8
+}

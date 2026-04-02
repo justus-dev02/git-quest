@@ -1,0 +1,57 @@
+{
+  "id": 45,
+  "name": "Bisect Debugging",
+  "description": "Use bisect to debug a real issue.",
+  "story": "A regression was introduced. Find the exact commit.",
+  "difficulty": "expert",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "v1",
+      "files": {
+        "app.py": "good"
+      }
+    },
+    {
+      "message": "v2",
+      "files": {
+        "app.py": "good"
+      }
+    },
+    {
+      "message": "v3",
+      "files": {
+        "app.py": "good"
+      }
+    },
+    {
+      "message": "v4",
+      "files": {
+        "app.py": "bad"
+      }
+    },
+    {
+      "message": "v5",
+      "files": {
+        "app.py": "bad"
+      }
+    },
+    {
+      "message": "v6",
+      "files": {
+        "app.py": "bad"
+      }
+    }
+  ],
+  "objective": {
+    "type": "bisect_completed"
+  },
+  "hints": [
+    "Start bisect",
+    "Mark current as bad, first commit as good",
+    "Test each step and mark good/bad"
+  ],
+  "base_score": 1800,
+  "par_time": 300,
+  "par_commands": 10
+}

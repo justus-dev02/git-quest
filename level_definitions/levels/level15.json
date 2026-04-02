@@ -1,0 +1,34 @@
+{
+  "id": 15,
+  "name": "Revert a Commit",
+  "description": "Undo a commit safely using git revert.",
+  "story": "A bug was introduced. Revert the problematic commit.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Add buggy feature",
+      "files": {
+        "buggy.txt": "bug"
+      }
+    }
+  ],
+  "objective": {
+    "type": "revert_commit",
+    "message": "buggy"
+  },
+  "hints": [
+    "Find the commit hash with 'git log'",
+    "Use 'git revert <commit-hash>'",
+    "This creates a new commit that undoes the changes"
+  ],
+  "base_score": 1200,
+  "par_time": 90,
+  "par_commands": 3
+}

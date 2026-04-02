@@ -1,0 +1,34 @@
+{
+  "id": 16,
+  "name": "Reset Soft",
+  "description": "Use git reset --soft to undo commits while keeping changes staged.",
+  "story": "You want to redo your last commit. Use soft reset.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Wrong commit message",
+      "files": {
+        "feature.txt": "code"
+      }
+    }
+  ],
+  "objective": {
+    "type": "reset_completed",
+    "clean": false
+  },
+  "hints": [
+    "Use 'git reset --soft HEAD~1'",
+    "Your changes will be staged",
+    "Now you can recommit with a better message"
+  ],
+  "base_score": 1200,
+  "par_time": 60,
+  "par_commands": 3
+}

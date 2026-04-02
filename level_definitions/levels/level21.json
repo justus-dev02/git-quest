@@ -1,0 +1,45 @@
+{
+  "id": 21,
+  "name": "Branch Cleanup",
+  "description": "Delete all merged branches.",
+  "story": "After a successful release, clean up merged branches.",
+  "difficulty": "intermediate",
+  "initial_state": "with_branches",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Feature 1",
+      "files": {
+        "f1.txt": "1"
+      },
+      "branch": "feature-1"
+    },
+    {
+      "message": "Feature 2",
+      "files": {
+        "f2.txt": "2"
+      },
+      "branch": "feature-2"
+    }
+  ],
+  "initial_branches": [
+    "feature-1",
+    "feature-2"
+  ],
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "Merge all feature branches first",
+    "Use 'git branch --merged' to see merged branches",
+    "Delete with 'git branch -d <branch>'"
+  ],
+  "base_score": 1200,
+  "par_time": 120,
+  "par_commands": 6
+}

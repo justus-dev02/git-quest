@@ -1,0 +1,33 @@
+{
+  "id": 32,
+  "name": "Reflog Recovery",
+  "description": "Recover a lost commit using reflog.",
+  "story": "Oh no! You accidentally reset away important work. Use reflog to recover!",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Important work",
+      "files": {
+        "important.txt": "critical"
+      }
+    }
+  ],
+  "objective": {
+    "type": "reflog_recovery"
+  },
+  "hints": [
+    "Use 'git reflog' to see all HEAD movements",
+    "Find the commit hash you lost",
+    "Use 'git reset --hard <commit>' to recover"
+  ],
+  "base_score": 1600,
+  "par_time": 120,
+  "par_commands": 4
+}

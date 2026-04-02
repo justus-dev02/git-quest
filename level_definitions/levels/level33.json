@@ -1,0 +1,28 @@
+{
+  "id": 33,
+  "name": "Orphan Branch",
+  "description": "Create an orphan branch with no shared history.",
+  "story": "Create a completely independent branch for documentation.",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Main commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "orphan_branch",
+    "name": "docs"
+  },
+  "hints": [
+    "Use 'git checkout --orphan docs'",
+    "Remove tracked files with 'git rm -rf .'",
+    "Add documentation files and commit"
+  ],
+  "base_score": 1400,
+  "par_time": 90,
+  "par_commands": 5
+}

@@ -1,0 +1,28 @@
+{
+  "id": 39,
+  "name": "Branch Tracking",
+  "description": "Set up branch tracking for a remote branch.",
+  "story": "Configure your local branch to track a remote branch.",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "current_branch",
+    "name": "main"
+  },
+  "hints": [
+    "Add a remote",
+    "Use 'git branch -u origin/main' to set upstream",
+    "Or use 'git push -u origin main'"
+  ],
+  "base_score": 1300,
+  "par_time": 90,
+  "par_commands": 4
+}

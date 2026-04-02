@@ -1,0 +1,28 @@
+{
+  "id": 20,
+  "name": "Multiple Branches",
+  "description": "Manage multiple feature branches.",
+  "story": "Create and manage three feature branches for different features.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "branch_exists",
+    "name": "feature-auth"
+  },
+  "hints": [
+    "Create branches: feature-auth, feature-api, feature-ui",
+    "Add at least one commit to each",
+    "Use 'git branch' to list all branches"
+  ],
+  "base_score": 1300,
+  "par_time": 180,
+  "par_commands": 9
+}

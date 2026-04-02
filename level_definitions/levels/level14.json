@@ -1,0 +1,28 @@
+{
+  "id": 14,
+  "name": "Stash Pop",
+  "description": "Restore your stashed changes.",
+  "story": "Now that you've switched branches, restore your stashed work.",
+  "difficulty": "intermediate",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "stash_applied",
+    "stash_count": 0
+  },
+  "hints": [
+    "First create a stash",
+    "Use 'git stash pop' to restore and remove",
+    "Or 'git stash apply' to just restore"
+  ],
+  "base_score": 1100,
+  "par_time": 90,
+  "par_commands": 4
+}

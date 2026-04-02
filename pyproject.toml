@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-quest"
+version = "1.1.0"
+authors = [
+  { name="Senior Git Quest Devs" },
+]
+description = "🎮 Learn Git through interactive challenges - Senior Edition"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Education",
+]
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+git-quest = "main:main"
+
+[tool.setuptools.packages.find]
+include = ["core", "git_engine", "level_definitions", "level_generators", "ui", "utils"]
+exclude = ["tests*", "data", "repos", "levels"]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+exclude = ["build/", "dist/", "venv/", ".venv/"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--cov=core --cov=git_engine --cov=ui --cov-report=term-missing"
+testpaths = ["tests"]

@@ -1,0 +1,20 @@
+{
+  "id": 26,
+  "name": "Basic Rebase",
+  "description": "Rebase your feature branch onto main.",
+  "story": "Your feature branch is behind main. Rebase to get up to date.",
+  "difficulty": "advanced",
+  "initial_state": "rebase_scenario",
+  "objective": {
+    "type": "rebase_completed",
+    "onto": "main"
+  },
+  "hints": [
+    "Make sure you're on the feature branch",
+    "Use 'git rebase main'",
+    "Your commits will be replayed on top of main"
+  ],
+  "base_score": 1400,
+  "par_time": 120,
+  "par_commands": 3
+}

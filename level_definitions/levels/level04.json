@@ -1,0 +1,28 @@
+{
+  "id": 4,
+  "name": "Branch Creation",
+  "description": "Create a new branch for feature development.",
+  "story": "Branches let you work on features without affecting main. Create the feature-login branch.",
+  "difficulty": "beginner",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "branch_exists",
+    "name": "feature-login"
+  },
+  "hints": [
+    "Use 'git branch feature-login' to create a branch",
+    "Or use 'git checkout -b feature-login' to create and switch",
+    "List branches with 'git branch'"
+  ],
+  "base_score": 1000,
+  "par_time": 45,
+  "par_commands": 2
+}

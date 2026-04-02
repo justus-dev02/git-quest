@@ -1,0 +1,46 @@
+{
+  "id": 40,
+  "name": "Rewrite History",
+  "description": "Comprehensively rewrite repository history.",
+  "story": "Clean up the entire history with proper commit messages.",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "init",
+      "files": {
+        "a.txt": "a"
+      }
+    },
+    {
+      "message": "wip",
+      "files": {
+        "b.txt": "b"
+      }
+    },
+    {
+      "message": "fix",
+      "files": {
+        "c.txt": "c"
+      }
+    },
+    {
+      "message": "stuff",
+      "files": {
+        "d.txt": "d"
+      }
+    }
+  ],
+  "objective": {
+    "type": "commit_count",
+    "count": 2
+  },
+  "hints": [
+    "Use interactive rebase from the root",
+    "Squash related commits",
+    "Write meaningful commit messages"
+  ],
+  "base_score": 1800,
+  "par_time": 300,
+  "par_commands": 6
+}

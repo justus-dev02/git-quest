@@ -1,0 +1,28 @@
+{
+  "id": 36,
+  "name": "Add Remote",
+  "description": "Configure a remote repository.",
+  "story": "Connect your local repo to a remote.",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "remote_exists",
+    "name": "origin"
+  },
+  "hints": [
+    "Use 'git remote add origin <url>'",
+    "For this exercise, use any URL",
+    "Verify with 'git remote -v'"
+  ],
+  "base_score": 1000,
+  "par_time": 45,
+  "par_commands": 2
+}

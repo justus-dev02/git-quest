@@ -1,0 +1,36 @@
+{
+  "id": 29,
+  "name": "Split a Commit",
+  "description": "Split a large commit into smaller ones.",
+  "story": "That commit has too many changes. Split it up.",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Big commit",
+      "files": {
+        "a.txt": "a",
+        "b.txt": "b",
+        "c.txt": "c"
+      }
+    }
+  ],
+  "objective": {
+    "type": "commit_count",
+    "count": 4
+  },
+  "hints": [
+    "Use 'git rebase -i' and mark commit as 'edit'",
+    "Use 'git reset HEAD~1' to uncommit",
+    "Commit files separately"
+  ],
+  "base_score": 1600,
+  "par_time": 240,
+  "par_commands": 8
+}

@@ -1,0 +1,19 @@
+{
+  "id": 30,
+  "name": "Rebase Conflict",
+  "description": "Resolve conflicts during a rebase.",
+  "story": "Your rebase has conflicts. Resolve them to continue.",
+  "difficulty": "advanced",
+  "initial_state": "rebase_scenario",
+  "objective": {
+    "type": "rebase_completed"
+  },
+  "hints": [
+    "Start the rebase",
+    "Resolve conflicts in each step",
+    "Use 'git rebase --continue' after each resolution"
+  ],
+  "base_score": 1700,
+  "par_time": 300,
+  "par_commands": 10
+}

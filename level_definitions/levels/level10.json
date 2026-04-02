@@ -1,0 +1,28 @@
+{
+  "id": 10,
+  "name": "Tag a Release",
+  "description": "Create a tag to mark a release version.",
+  "story": "Version 1.0 is ready. Tag this commit for release.",
+  "difficulty": "beginner",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial commit",
+      "files": {
+        "README.md": "# Project v1.0"
+      }
+    }
+  ],
+  "objective": {
+    "type": "tag_exists",
+    "name": "v1.0"
+  },
+  "hints": [
+    "Use 'git tag v1.0' to create a lightweight tag",
+    "Or 'git tag -a v1.0 -m \"Version 1.0\"' for annotated",
+    "List tags with 'git tag'"
+  ],
+  "base_score": 1000,
+  "par_time": 45,
+  "par_commands": 2
+}

@@ -1,0 +1,19 @@
+{
+  "id": 11,
+  "name": "Merge Conflict Introduction",
+  "description": "Encounter and understand merge conflicts.",
+  "story": "Two developers modified the same file. Now there's a conflict!",
+  "difficulty": "intermediate",
+  "initial_state": "merge_conflict",
+  "objective": {
+    "type": "conflict_resolved"
+  },
+  "hints": [
+    "Open the conflicted file to see conflict markers",
+    "Edit the file to resolve the conflict",
+    "Stage the resolved file and commit"
+  ],
+  "base_score": 1200,
+  "par_time": 180,
+  "par_commands": 5
+}

@@ -1,0 +1,27 @@
+{
+  "id": 38,
+  "name": "Force Push",
+  "description": "Understand when and how to use force push.",
+  "story": "You've rewritten history. Now you need to force push.",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "First rewrite history (amend, rebase, etc.)",
+    "Use 'git push --force' or 'git push --force-with-lease'",
+    "Be careful - this overwrites remote history!"
+  ],
+  "base_score": 1500,
+  "par_time": 120,
+  "par_commands": 4
+}

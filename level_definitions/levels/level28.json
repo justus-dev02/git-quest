@@ -1,0 +1,46 @@
+{
+  "id": 28,
+  "name": "Squash Commits",
+  "description": "Combine multiple commits into one.",
+  "story": "Those three WIP commits should be one. Squash them!",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "Part 1",
+      "files": {
+        "part1.txt": "1"
+      }
+    },
+    {
+      "message": "Part 2",
+      "files": {
+        "part2.txt": "2"
+      }
+    },
+    {
+      "message": "Part 3",
+      "files": {
+        "part3.txt": "3"
+      }
+    }
+  ],
+  "objective": {
+    "type": "squash_commits",
+    "expected_commits": 2
+  },
+  "hints": [
+    "Use 'git rebase -i HEAD~3'",
+    "Keep first as 'pick', change others to 'squash'",
+    "Write a combined commit message"
+  ],
+  "base_score": 1500,
+  "par_time": 180,
+  "par_commands": 4
+}

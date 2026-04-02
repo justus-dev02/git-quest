@@ -1,0 +1,27 @@
+{
+  "id": 42,
+  "name": "Corrupted History",
+  "description": "Deal with a corrupted Git history.",
+  "story": "The repository has issues. Diagnose and fix them.",
+  "difficulty": "expert",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    }
+  ],
+  "objective": {
+    "type": "clean_state"
+  },
+  "hints": [
+    "Run 'git fsck' to check integrity",
+    "Use 'git gc' to clean up",
+    "Recover any dangling commits with reflog"
+  ],
+  "base_score": 1800,
+  "par_time": 240,
+  "par_commands": 6
+}

@@ -1,0 +1,45 @@
+{
+  "id": 27,
+  "name": "Interactive Rebase",
+  "description": "Use interactive rebase to edit commit history.",
+  "story": "Clean up your commit history with interactive rebase.",
+  "difficulty": "advanced",
+  "initial_state": "with_commits",
+  "initial_commits": [
+    {
+      "message": "Initial",
+      "files": {
+        "README.md": "# Project"
+      }
+    },
+    {
+      "message": "WIP 1",
+      "files": {
+        "a.txt": "a"
+      }
+    },
+    {
+      "message": "WIP 2",
+      "files": {
+        "b.txt": "b"
+      }
+    },
+    {
+      "message": "WIP 3",
+      "files": {
+        "c.txt": "c"
+      }
+    }
+  ],
+  "objective": {
+    "type": "interactive_rebase"
+  },
+  "hints": [
+    "Use 'git rebase -i HEAD~3'",
+    "Change 'pick' to 'squash' or 'reword'",
+    "Save and exit the editor"
+  ],
+  "base_score": 1500,
+  "par_time": 180,
+  "par_commands": 4
+}
