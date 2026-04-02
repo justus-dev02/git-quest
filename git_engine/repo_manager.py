@@ -42,6 +42,11 @@ class RepoManager:
         try:
             repo_path.mkdir(parents=True, exist_ok=True)
             self.git_executor.run(["init", "--initial-branch=main"], cwd=repo_path)
+            # Configure local identity for CI and tests
+            self.git_executor.run(
+                ["config", "user.email", "git-quest-bot@example.com"], cwd=repo_path
+            )
+            self.git_executor.run(["config", "user.name", "Git Quest Bot"], cwd=repo_path)
             return True
         except GitCommandError as e:
             logger.error(f"Failed to initialize repository: {e}")

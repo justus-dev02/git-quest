@@ -37,5 +37,11 @@ jobs:
       - name: Type checking with mypy
         run: mypy .
         
+      - name: Configure Git for tests
+        run: |
+          git config --global user.email "git-quest-bot@example.com"
+          git config --global user.name "Git Quest Bot"
+          git config --global init.defaultBranch main
+        
       - name: Run tests with pytest
         run: pytest

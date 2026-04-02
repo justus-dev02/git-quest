@@ -70,8 +70,9 @@ class LevelSetupService:
     def _has_commits(self, repo_path: Path) -> bool:
         """Check if the repository has any commits."""
         try:
-            self.git_executor.run(["rev-parse", "HEAD"], cwd=repo_path)
-            return True
+            # Check for any refs first
+            result = self.git_executor.run(["rev-list", "--count", "--all"], cwd=repo_path)
+            return int(result.stdout.strip()) > 0
         except Exception:
             return False
 
